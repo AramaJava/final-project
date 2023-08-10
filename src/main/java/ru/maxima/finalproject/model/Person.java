@@ -4,7 +4,6 @@ package ru.maxima.finalproject.model;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,7 +17,6 @@ import java.util.List;
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="person_id")
     private Long id;
     private String name;
     private Integer age;
