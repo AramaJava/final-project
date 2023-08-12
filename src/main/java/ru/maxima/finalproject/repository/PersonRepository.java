@@ -9,5 +9,5 @@ import ru.maxima.finalproject.model.Person;
  */
 
 @Repository
-public interface PersonRepo extends JpaRepository<Person, Long> {
+public interface PersonRepository extends JpaRepository<Person, Long> {
 }

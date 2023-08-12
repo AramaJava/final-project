@@ -1,4 +1,4 @@
-package ru.maxima.finalproject.model;
+package ru.maxima.finalproject.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,5 +10,4 @@ import lombok.Data;
 @Data
 public class HelloBean {
     private String message;
-
 }

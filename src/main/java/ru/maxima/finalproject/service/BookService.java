@@ -4,7 +4,7 @@ package ru.maxima.finalproject.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.maxima.finalproject.model.Book;
-import ru.maxima.finalproject.repository.BookRepo;
+import ru.maxima.finalproject.repository.BookRepository;
 
 import java.util.List;
 
@@ -16,9 +16,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookService {
 
-    private final BookRepo bookRepo;
+    private final BookRepository bookRepository;
 
     public List<Book> allBooks() {
-        return bookRepo.findAll();
+        return bookRepository.findAll();
+
     }
 }
