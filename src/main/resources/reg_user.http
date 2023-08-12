@@ -1,7 +1,8 @@
 POST localhost:8080/admin/reg/1
 Content-Type: application/json
 
-{ "name": "user1",
+{
+  "name": "user1",
   "email": "user1@mail.ru",
   "role": "user",
  "password" : "userpass"

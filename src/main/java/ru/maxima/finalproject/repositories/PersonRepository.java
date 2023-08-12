@@ -10,5 +10,5 @@ import ru.maxima.finalproject.models.Person;
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
     @Query
-    String findNameById(Long adminId);
+    Person getPersonById(Long adminId);
 }
