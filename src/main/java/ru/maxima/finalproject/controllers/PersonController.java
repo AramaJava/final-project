@@ -1,10 +1,10 @@
-package ru.maxima.finalproject.controller;
+package ru.maxima.finalproject.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.maxima.finalproject.model.Person;
-import ru.maxima.finalproject.service.PersonService;
+import ru.maxima.finalproject.models.Person;
+import ru.maxima.finalproject.services.PersonService;
 
 import java.util.List;
 

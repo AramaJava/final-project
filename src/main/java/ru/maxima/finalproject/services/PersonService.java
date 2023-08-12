@@ -1,9 +1,9 @@
-package ru.maxima.finalproject.service;
+package ru.maxima.finalproject.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.maxima.finalproject.model.Person;
-import ru.maxima.finalproject.repository.PersonRepository;
+import ru.maxima.finalproject.models.Person;
+import ru.maxima.finalproject.repositories.PersonRepository;
 
 import java.util.List;
 
