@@ -25,7 +25,7 @@ public class AuthServiceImpl implements AuthService {
                 .email(user.getEmail())
                 .role(user.getRole())
                 .createdAt(LocalDateTime.now())
-                .createdPerson(personRepository.getPersonById(adminId).getName())
+                .createdPerson(personRepository.getPersonNameById(adminId))
                 .build();
 
         personRepository.save(personForSave);
