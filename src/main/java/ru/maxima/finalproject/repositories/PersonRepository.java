@@ -1,6 +1,7 @@
 package ru.maxima.finalproject.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import ru.maxima.finalproject.models.Person;
 
 /**
@@ -8,4 +9,6 @@ import ru.maxima.finalproject.models.Person;
  */
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
+    @Query
+    String findNameById(Long adminId);
 }
