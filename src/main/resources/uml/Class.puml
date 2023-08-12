@@ -1,0 +1,45 @@
+@startuml
+
+'hide fields
+'hide methods
+'hide Book
+'hide @unlinked
+
+package "model" <<Frame>>  #lightblue {
+
+
+class Book << (C, yellow) >> {
+ - Long id
+ - String name
+ - Integer yearOfProduction
+ - String  author
+ - String annotation
+ - LocalDateTime createdAt
+ - LocalDateTime updatedAt
+ - LocalDateTime removedAt
+ - String createdPerson
+ - String updatedPerson
+ - String removedPerson
+ - Person owner
+}
+
+class Person << (C, yellow) >> {
+ - Long id
+ - String name
+ - Integer age
+ - String email
+ - String phoneNumber
+ - String password
+ - String role
+ - LocalDateTime createdAt
+ - LocalDateTime removedAt
+ - String createdPerson
+ - String removedPerson
+ - List<Book> takenBooks
+}
+
+Person --|{ Book
+
+}
+
+@enduml
