@@ -12,9 +12,8 @@ import ru.maxima.finalproject.repositories.PersonRepository;
 @Service
 @RequiredArgsConstructor
 public class JWTService {
+    public static final String SECRET = "231123333";
     private final PersonRepository personRepository;
-
-    private static final String SECRET = "231123333";
 
     public String getToken(Person person) {
         Person personFromDB = personRepository

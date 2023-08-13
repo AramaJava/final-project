@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.maxima.finalproject.models.Book;
-import ru.maxima.finalproject.dto.HelloBean;
 import ru.maxima.finalproject.services.BookService;
 
 import java.util.List;
@@ -22,11 +21,5 @@ public class BookController {
     public List<Book> getAllBooks() {
        return bookService.allBooks();
    }
-
-    @GetMapping("/hello")
-    public HelloBean helloBean() {
-      return new HelloBean("Hello World");
-   }
-
 
 }
