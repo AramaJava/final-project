@@ -9,11 +9,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import ru.maxima.finalproject.configurations.details.PersonDetails;
-import ru.maxima.finalproject.controllers.PersonController;
 import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.services.JWTService;
 
