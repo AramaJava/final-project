@@ -7,7 +7,7 @@ import ru.maxima.finalproject.models.Person;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/admin")
+@RequestMapping("/auth")
 public class AuthController {
 
     private final AuthService authService;
@@ -15,7 +15,8 @@ public class AuthController {
     public void registration(@RequestBody Person user, @PathVariable Long adminId) {
         authService.registration(user, adminId);
     }
-    public String authentication() {
-        return null;
+    @GetMapping("/login")
+    public String authentication(@RequestBody Person person) {
+        return authService.authentication(person);
     }
 }

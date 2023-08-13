@@ -1,4 +1,4 @@
-package ru.maxima.finalproject.configuration;
+package ru.maxima.finalproject.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,10 +13,13 @@ public class SpringConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http
 
-               // .csrf(AbstractHttpConfigurer::disable)
+                // .csrf(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
-                .sessionManagement(s ->s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(a -> {
+                    a.requestMatchers("/auth/login").permitAll();
+                    a.anyRequest().authenticated();
+                })
                 .build();
     }
 }

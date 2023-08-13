@@ -4,7 +4,7 @@ import ru.maxima.finalproject.models.Person;
 
 public interface AuthService {
 
-    public void registration(Person user, Long adminId);
+    void registration(Person user, Long adminId);
 
-    public String authentication();
+    String authentication(Person person);
 }
