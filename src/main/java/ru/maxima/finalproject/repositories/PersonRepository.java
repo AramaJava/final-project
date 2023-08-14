@@ -11,9 +11,13 @@ import java.util.Optional;
  */
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
-    @Query ("select p.name from #{#entityName} p where p.id = ?1")
-    String getPersonNameById(Long adminId);
 
     @Query
     Optional<Person> findByEmail(String email);
+
+
+    @Query("select p.name from #{#entityName} p where p.id=?1")
+    String findBy(Long adminId);
+
+
 }

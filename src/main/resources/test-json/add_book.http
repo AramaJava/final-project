@@ -1,8 +1,10 @@
-POST localhost:8080/admin/addbook/1
+POST localhost:8080/books/addbook/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4ifQ.96wwenDmcHc-IgNAI-hDOWtmd5ya74pHfgbjgyF2j7Q
 Content-Type: application/json
 
 {
-  "name": "testuser2",
-  "password": "userpassw",
-  "email": "testuser2@mail.ru"
+"name": "Хорошая книга 2",
+"author": "Я",
+"yearOfProduction": 2020,
+"annotation": "читать по любому"
 }

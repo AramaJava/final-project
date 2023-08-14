@@ -6,6 +6,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ru.maxima.finalproject.configurations.Authorities;
 import ru.maxima.finalproject.interfaces.AuthService;
 import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.repositories.PersonRepository;
@@ -18,7 +19,7 @@ import java.time.LocalDateTime;
 public class AuthServiceImpl implements AuthService {
 
     private final PersonRepository personRepository;
-    private final JWTService jwtService;
+    private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
 
@@ -29,9 +30,9 @@ public class AuthServiceImpl implements AuthService {
                 .name(user.getName())
                 .password(passwordEncoder.encode(user.getPassword()))
                 .email(user.getEmail())
-                .role("User")
+                .role(Authorities.ROLE_USER)
                 .createdAt(LocalDateTime.now())
-                .createdPerson(personRepository.getPersonNameById(adminId))
+                .createdPerson(personRepository.findBy(adminId))
                 .build();
         personRepository.save(personForSave);
     }
