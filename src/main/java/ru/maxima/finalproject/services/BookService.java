@@ -1,13 +1,12 @@
 package ru.maxima.finalproject.services;
 
 
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.repositories.BookRepository;
-import ru.maxima.finalproject.repositories.PersonRepository;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,8 +21,7 @@ import java.util.List;
 public class BookService {
 
     private final BookRepository bookRepository;
-
-    private final PersonRepository personRepository;
+    private final PersonService personService;
 
     public List<Book> allBooks() {
         return bookRepository.findAllNotRemoved();
@@ -36,7 +34,7 @@ public class BookService {
                 .author(book.getAuthor())
                 .yearOfProduction(book.getYearOfProduction())
                 .annotation(book.getAnnotation())
-                .createdPerson(personRepository.findPersonById(adminId).getName())
+                .createdPerson(personService.getPersonName(adminId))
                 .createdAt(LocalDateTime.now())
                 .build();
         bookRepository.save(bookForSave);

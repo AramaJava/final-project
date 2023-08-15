@@ -3,8 +3,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQ
 Content-Type: application/json
 
 {
-  "name": "user3",
-  "email": "user3@mail.ru",
-  "role": "User",
-  "password" : "userpass"
+  "name": "user1",
+  "email": "user1@mail.ru",
+  "role": "user",
+  "password" : "2222"
 }

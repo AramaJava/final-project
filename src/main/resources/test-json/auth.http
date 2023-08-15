@@ -5,3 +5,14 @@ Content-Type: application/json
   "email": "admin@mail.ru",
   "password": "2222"
 }
+
+
+###
+
+GET localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "user1@mail.ru",
+  "password": "2222"
+}

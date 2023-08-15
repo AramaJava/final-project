@@ -3,8 +3,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQ
 Content-Type: application/json
 
 {
-"name": "Хорошая книга 2",
-"author": "Я",
-"yearOfProduction": 2020,
+"name": "Хорошая книга 3",
+"author": "Я2222",
+"yearOfProduction": 2021,
 "annotation": "читать по любому"
+}
+
+
+###
+
+POST localhost:8080/books/addbook/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciJ9.zczbu6YPC1hHaH_ZUIplkvNpZ3u0hpV3cxsbaPYmbYY
+Content-Type: application/json
+
+{
+  "name": "Хорошая книга 3",
+  "author": "Я2222",
+  "yearOfProduction": 2021,
+  "annotation": "читать по любому"
 }
