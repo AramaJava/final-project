@@ -1,10 +1,10 @@
 package ru.maxima.finalproject.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.models.Person;
+import ru.maxima.finalproject.services.AuthService;
 import ru.maxima.finalproject.services.PersonService;
 
 import java.util.List;
@@ -15,8 +15,18 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/person`")
+@RequestMapping("/persons")
 public class PersonController {
+
+
+    private final AuthService authService;
+
+    @PostMapping("/reg/{adminId}")
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    public void registration(@RequestBody Person user, @PathVariable Long adminId) {
+        authService.registration(user, adminId);
+    }
+
 
     private final PersonService personService;
     @GetMapping("/getAllPersons")
