@@ -3,7 +3,7 @@ package ru.maxima.finalproject.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import ru.maxima.finalproject.interfaces.AuthService;
+import ru.maxima.finalproject.services.AuthService;
 import ru.maxima.finalproject.models.Person;
 
 @RestController
