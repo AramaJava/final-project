@@ -36,7 +36,7 @@ public class BookService {
                 .author(book.getAuthor())
                 .yearOfProduction(book.getYearOfProduction())
                 .annotation(book.getAnnotation())
-                .createdPerson(personRepository.findBy(adminId))
+                .createdPerson(personRepository.findPersonById(adminId).getName())
                 .createdAt(LocalDateTime.now())
                 .build();
         bookRepository.save(bookForSave);

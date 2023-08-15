@@ -33,7 +33,7 @@ public class AuthServiceImpl implements AuthService {
                 .email(user.getEmail())
                 .role(Authorities.ROLE_USER)
                 .createdAt(LocalDateTime.now())
-                .createdPerson(personRepository.findBy(adminId))
+                .createdPerson(personRepository.findPersonById(adminId).getName())
                 .build();
         personRepository.save(personForSave);
     }
