@@ -17,6 +17,7 @@ import java.util.Optional;
 @Transactional
 @RequiredArgsConstructor
 public class PersonService {
+
     private final PersonRepository personRepository;
 
     public String getPersonName(Long id) {
@@ -29,7 +30,7 @@ public class PersonService {
 
     }
 
-    public List<Person> allPersons() {
+    public List<Person> findAll() {
         return personRepository.findAll();
     }
 

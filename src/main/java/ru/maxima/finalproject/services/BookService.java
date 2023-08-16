@@ -13,7 +13,9 @@ import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.repositories.BookRepository;
 
 
+import java.security.Principal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -34,13 +36,13 @@ public class BookService {
 
     }
 
-    public void newBook(Book book, Long adminId) {
+    public void newBook(Book book, Principal principal) {
         Book bookForSave = Book.builder()
                 .name(book.getName())
                 .author(book.getAuthor())
                 .yearOfProduction(book.getYearOfProduction())
                 .annotation(book.getAnnotation())
-                .createdPerson(personService.getPersonName(adminId))
+                .createdPerson(principal.getName())
                 .createdAt(LocalDateTime.now())
                 .build();
         bookRepository.save(bookForSave);
@@ -52,19 +54,15 @@ public class BookService {
 
     // удалить книгу (админ)
 
-    public void removeBookById(Long bookId) {
+    public void removeBookById(Long bookId, Principal principal) {
 
-        PersonDetails personDetails = (PersonDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
-
-        String adminName =   personDetails.getUsername();
 
         Book bookForRemove = bookRepository.findBookById(bookId);
 
         bookForRemove.setRemovedAt(LocalDateTime.now());
-        bookForRemove.setRemovedPerson(adminName);
+        bookForRemove.setRemovedPerson(principal.getName());
         bookForRemove.setUpdatedAt(LocalDateTime.now());
-        bookForRemove.setUpdatedPerson(adminName);
+        bookForRemove.setUpdatedPerson(principal.getName());
         bookRepository.save(bookForRemove);
 
 

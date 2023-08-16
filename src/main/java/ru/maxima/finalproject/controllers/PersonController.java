@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/persons")
 public class PersonController {
 
-
+    private final PersonService personService;
     private final AuthService authService;
 
     @PostMapping("/reg/{adminId}")
@@ -28,9 +28,9 @@ public class PersonController {
     }
 
 
-    private final PersonService personService;
-    @GetMapping("/getAllPersons")
+
+    @GetMapping("/persons")
     public List<Person> getAllPersons() {
-        return personService.allPersons();
+        return personService.findAll();
     }
 }

@@ -1,4 +1,4 @@
-POST localhost:8080/books/addbook/1
+POST localhost:8080/books/add-book
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4ifQ.96wwenDmcHc-IgNAI-hDOWtmd5ya74pHfgbjgyF2j7Q
 Content-Type: application/json
 
@@ -12,7 +12,7 @@ Content-Type: application/json
 
 ###
 
-POST localhost:8080/books/addbook/1
+POST localhost:8080/books/addbook
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciJ9.zczbu6YPC1hHaH_ZUIplkvNpZ3u0hpV3cxsbaPYmbYY
 Content-Type: application/json
 
