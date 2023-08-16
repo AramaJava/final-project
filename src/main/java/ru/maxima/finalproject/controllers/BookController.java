@@ -2,7 +2,9 @@ package ru.maxima.finalproject.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
+
 import org.springframework.web.bind.annotation.*;
+
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.BookService;
 
@@ -33,7 +35,7 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/remove/{bookId}")
-    public void removeBookById(@PathVariable Long bookId, Long adminId) {
-        bookService.removeBookById(bookId, adminId);
+    public void removeBookById(@PathVariable Long bookId) {
+        bookService.removeBookById(bookId);
     }
 }
