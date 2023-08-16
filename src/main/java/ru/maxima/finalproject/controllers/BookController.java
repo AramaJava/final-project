@@ -30,4 +30,10 @@ public class BookController {
     public void addBook(@RequestBody Book book, @PathVariable Long adminId) {
         bookService.newBook(book, adminId);
     }
+
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    @PostMapping("/remove/{bookId}")
+    public void removeBookById(@PathVariable Long bookId, Long adminId) {
+        bookService.removeBookById(bookId, adminId);
+    }
 }

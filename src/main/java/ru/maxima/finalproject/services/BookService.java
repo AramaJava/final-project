@@ -2,6 +2,7 @@ package ru.maxima.finalproject.services;
 
 
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.maxima.finalproject.models.Book;
@@ -10,6 +11,7 @@ import ru.maxima.finalproject.repositories.BookRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+
 
 /**
  * @author AramaJava 10.08.2023
@@ -24,7 +26,7 @@ public class BookService {
     private final PersonService personService;
 
     public List<Book> allBooks() {
-        return bookRepository.findAllNotRemoved();
+        return bookRepository.findByRemovedAtIsNull();
 
     }
 
@@ -45,6 +47,18 @@ public class BookService {
     // добавить книгу (админ) +
 
     // удалить книгу (админ)
+
+    public void removeBookById(Long bookId, Long adminId) {
+        Book bookForRemove = bookRepository.findBookById(bookId);
+
+        bookForRemove.setRemovedAt(LocalDateTime.now());
+        bookForRemove.setRemovedPerson(personService.getPersonName(adminId));
+        bookForRemove.setUpdatedAt(LocalDateTime.now());
+        bookForRemove.setUpdatedPerson(personService.getPersonName(adminId));
+        bookRepository.save(bookForRemove);
+
+
+    }
 
     // редактировать книгу (админ)
 

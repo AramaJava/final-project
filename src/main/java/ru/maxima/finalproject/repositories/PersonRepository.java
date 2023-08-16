@@ -13,7 +13,6 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     Optional<Person> findByEmail(String email);
 
-
     Optional<Person> findPersonById(Long adminId);
 
 

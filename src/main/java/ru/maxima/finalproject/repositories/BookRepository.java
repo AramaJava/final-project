@@ -1,7 +1,6 @@
 package ru.maxima.finalproject.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import ru.maxima.finalproject.models.Book;
 
 import java.util.List;
@@ -12,6 +11,7 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    @Query(value = "SELECT * FROM BOOK b WHERE b.removedAt is null", nativeQuery = true)
-    List<Book> findAllNotRemoved();
+     List<Book> findByRemovedAtIsNull();
+
+     Book findBookById(Long id);
 }
