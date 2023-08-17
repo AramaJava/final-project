@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.BookService;
 
-
-import java.security.Principal;
 import java.util.List;
 
 /**
@@ -31,8 +29,8 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/add-book")
-    public void addBook(@RequestBody Book book, Principal principal) {
-      bookService.newBook(book, principal);
+    public void addBook(@RequestBody Book book) {
+      bookService.newBook(book);
     }
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")

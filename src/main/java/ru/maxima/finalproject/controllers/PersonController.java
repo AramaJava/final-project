@@ -39,4 +39,12 @@ public class PersonController {
     public Optional<Person> getOnePerson(@PathVariable Long personId) {
         return personService.findPerson(personId);
     }
+
+    @PostMapping()
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    public void addPerson(@RequestBody Person person) {
+        personService.addPerson(person);
+    }
+
+
 }

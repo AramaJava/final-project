@@ -14,7 +14,6 @@ import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.repositories.BookRepository;
 
 
-import java.security.Principal;
 import java.time.LocalDateTime;
 
 import java.util.List;
@@ -38,13 +37,13 @@ public class BookService {
 
     }
 
-    public void newBook(Book book, Principal principal) {
+    public void newBook(Book book) {
         Book bookForSave = Book.builder()
                 .name(book.getName())
                 .author(book.getAuthor())
                 .yearOfProduction(book.getYearOfProduction())
                 .annotation(book.getAnnotation())
-                .createdPerson(principal.getName())
+                .createdPerson(getCurrentPerson().getName())
                 .createdAt(LocalDateTime.now())
                 .build();
         bookRepository.save(bookForSave);
