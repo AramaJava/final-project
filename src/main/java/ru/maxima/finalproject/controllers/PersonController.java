@@ -8,6 +8,7 @@ import ru.maxima.finalproject.services.AuthService;
 import ru.maxima.finalproject.services.PersonService;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author AramaJava 12.08.2023
@@ -31,5 +32,11 @@ public class PersonController {
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     public List<Person> getAllPersons() {
         return personService.findAll();
+    }
+
+    @GetMapping("{personId}")
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    public Optional<Person> getOnePerson(@PathVariable Long personId) {
+        return personService.findPerson(personId);
     }
 }

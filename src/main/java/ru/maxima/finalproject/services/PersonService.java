@@ -34,4 +34,11 @@ public class PersonService {
         return personRepository.findAll();
     }
 
+    public Optional<Person> findPerson(Long personId) {
+        Optional<Person> p = personRepository.findPersonById(personId);
+
+        if (p.isPresent()) {
+            return p;
+        } else throw new UserNotFoundException();
+    }
 }
