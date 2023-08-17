@@ -6,6 +6,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.BookService;
+
 import java.util.List;
 
 /**
@@ -28,7 +29,8 @@ public class BookController {
     // добавить книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping()
-    public ResponseEntity<Book> addBook(@RequestBody Book book){
+    public ResponseEntity<Book> addBook(@RequestBody Book book) {
+
         bookService.saveBook(book);
         return ResponseEntity.created(null).build();
     }
