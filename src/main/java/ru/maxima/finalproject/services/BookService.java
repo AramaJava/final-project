@@ -3,12 +3,14 @@ package ru.maxima.finalproject.services;
 
 import lombok.RequiredArgsConstructor;
 
-
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import ru.maxima.finalproject.models.Book;
+import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.repositories.BookRepository;
 
 
@@ -16,6 +18,7 @@ import java.security.Principal;
 import java.time.LocalDateTime;
 
 import java.util.List;
+
 
 
 /**
@@ -53,15 +56,20 @@ public class BookService {
 
     // удалить книгу (админ)
 
-    public void removeBookById(Long bookId, Principal principal) {
+    public Person getCurrentPerson() {
+        return ((Person) SecurityContextHolder.getContext()
+                .getAuthentication()
+                .getPrincipal());
+    }
 
+    public void removeBookById(Long bookId) {
 
         Book bookForRemove = bookRepository.findBookById(bookId);
 
         bookForRemove.setRemovedAt(LocalDateTime.now());
-        bookForRemove.setRemovedPerson(principal.getName());
+        bookForRemove.setRemovedPerson(getCurrentPerson().getName());
         bookForRemove.setUpdatedAt(LocalDateTime.now());
-        bookForRemove.setUpdatedPerson(principal.getName());
+        bookForRemove.setUpdatedPerson(getCurrentPerson().getName());
         bookRepository.save(bookForRemove);
 
 

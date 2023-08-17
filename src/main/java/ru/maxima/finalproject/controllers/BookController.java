@@ -37,8 +37,8 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/remove/{bookId}")
-    public void removeBookById(@PathVariable Long bookId, Principal principal) {
+    public void removeBookById(@PathVariable Long bookId) {
 
-        bookService.removeBookById(bookId, principal);
+        bookService.removeBookById(bookId);
     }
 }

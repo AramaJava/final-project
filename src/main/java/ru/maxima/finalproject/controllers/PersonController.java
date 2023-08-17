@@ -27,7 +27,7 @@ public class PersonController {
         authService.registration(user, adminId);
     }
 
-    @GetMapping("")
+    @GetMapping()
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     public List<Person> getAllPersons() {
         return personService.findAll();

@@ -36,6 +36,7 @@ public class JwtFilter extends OncePerRequestFilter {
                 Person person = Person.builder()
                         .email(decodedJWT.getClaim("Email").asString())
                         .role(decodedJWT.getClaim("Role").asString())
+                        .name(decodedJWT.getClaim("Name").asString())
                         .build();
                 PersonDetails personDetails = new PersonDetails(person);
 

@@ -23,6 +23,7 @@ public class JwtService {
         return JWT.create()
                 .withClaim("Email", personFromDB.getEmail())
                 .withClaim("Role", personFromDB.getRole())
+                .withClaim("Name", personFromDB.getName())
                 .sign(Algorithm.HMAC256(SECRET));
     }
 }
