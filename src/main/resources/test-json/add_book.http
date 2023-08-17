@@ -1,19 +1,20 @@
+### токен админа
 POST localhost:8080/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4ifQ.96wwenDmcHc-IgNAI-hDOWtmd5ya74pHfgbjgyF2j7Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24ifQ.MbDFDri66C9QOj0TPpDcHdeGjAu-fPgurk6uezPMlAM
 Content-Type: application/json
 
 {
-"name": "Хорошая книга 3",
+"name": "Хорошая книга 2",
 "author": "Я2222",
 "yearOfProduction": 2021,
 "annotation": "читать по любому"
 }
 
 
-###
+### не админ
 
 POST localhost:8080/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciJ9.zczbu6YPC1hHaH_ZUIplkvNpZ3u0hpV3cxsbaPYmbYY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIyQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.22gf5yQPz2sYf4Tpjm-oK26qYwaoBEcrjNEebTbD05o
 Content-Type: application/json
 
 {

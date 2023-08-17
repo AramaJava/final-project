@@ -1,6 +1,7 @@
 package ru.maxima.finalproject.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -20,17 +21,22 @@ public class BookController {
 
     private final BookService bookService;
 
-    // получить все книги
+    // получить все книги не removed
     @GetMapping()
-    public List<Book> getAllBooks() {
-        return bookService.allBooks();
+    public ResponseEntity<List<Book>> getAllBooks() {
+        List<Book> allBooks = bookService.allBooks();
+        if (allBooks == null)
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        else if (allBooks.isEmpty())
+            return new ResponseEntity<>(allBooks, HttpStatus.NO_CONTENT);
+        else
+            return new ResponseEntity<>(allBooks, HttpStatus.OK);
     }
 
     // добавить книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping()
     public ResponseEntity<Book> addBook(@RequestBody Book book) {
-
         bookService.saveBook(book);
         return ResponseEntity.created(null).build();
     }

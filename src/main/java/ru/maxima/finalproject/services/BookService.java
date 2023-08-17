@@ -22,7 +22,6 @@ public class BookService {
 
     private final BookRepository bookRepository;
 
-
     // вспомогательный метод определения текущего пользователя
     public Person getCurrentPerson() {
         return ((Person) SecurityContextHolder.getContext()
@@ -31,6 +30,7 @@ public class BookService {
     }
 
     public List<Book> allBooks() {
+
         return bookRepository.findByRemovedAtIsNull();
     }
 
@@ -50,6 +50,7 @@ public class BookService {
     }
 
     public void removeBookById(Long bookId) {
+
         Book bookForRemove = bookRepository.findBookById(bookId);
         bookForRemove.setRemovedAt(LocalDateTime.now());
         bookForRemove.setRemovedPerson(getCurrentPerson().getName());

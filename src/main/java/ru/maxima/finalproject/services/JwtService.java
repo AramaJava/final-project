@@ -24,6 +24,7 @@ public class JwtService {
                 .withClaim("Email", personFromDB.getEmail())
                 .withClaim("Role", personFromDB.getRole())
                 .withClaim("Name", personFromDB.getName())
+
                 .sign(Algorithm.HMAC256(SECRET));
     }
 }

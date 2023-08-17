@@ -33,15 +33,11 @@ public class PersonService {
                 .getPrincipal());
     }
 
+
     public String getPersonName(Long id) {
-
-        Optional<Person> p = personRepository.findPersonById(id);
-
-        if (p.isPresent()) {
-            return p.get().getName();
-        } else throw new UserNotFoundException();
-
+        return personRepository.findPersonById(id).orElseThrow(UserNotFoundException::new).getName();
     }
+
 
     public List<Person> findAll() {
         return personRepository.findAll();
@@ -64,7 +60,6 @@ public class PersonService {
                 .email(person.getEmail())
                 .role(Authorities.ROLE_USER)
                 .createdAt(LocalDateTime.now())
-                .createdPerson(getCurrentPerson().getName())
                 .build();
         personRepository.save(personForSave);
 
