@@ -1,13 +1,11 @@
 package ru.maxima.finalproject.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-
 import org.springframework.web.bind.annotation.*;
-
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.BookService;
-
 import java.util.List;
 
 /**
@@ -21,22 +19,30 @@ public class BookController {
 
     private final BookService bookService;
 
+    // получить все книги
     @GetMapping()
     public List<Book> getAllBooks() {
         return bookService.allBooks();
     }
 
-
+    // добавить книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
-    @PostMapping("/add-book")
-    public void addBook(@RequestBody Book book) {
-      bookService.newBook(book);
+    @PostMapping()
+    public ResponseEntity<Book> addBook(@RequestBody Book book){
+        bookService.saveBook(book);
+        return ResponseEntity.created(null).build();
     }
 
+    // удалить (пометить removedAt) книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/remove/{bookId}")
     public void removeBookById(@PathVariable Long bookId) {
-
         bookService.removeBookById(bookId);
     }
+
+    // редактировать книгу (админ)
+
+    // взять книгу (любой авторизовавшийся)
+
+    // вернуть книгу (любой авторизовавшийся)
 }

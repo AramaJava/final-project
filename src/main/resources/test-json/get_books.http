@@ -1,3 +1,0 @@
-GET localhost:8080/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4ifQ.96wwenDmcHc-IgNAI-hDOWtmd5ya74pHfgbjgyF2j7Q
-Content-Type: application/json
