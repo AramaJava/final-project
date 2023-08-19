@@ -1,30 +1,17 @@
-
 package ru.maxima.finalproject.services;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import ru.maxima.finalproject.exceptions.UserNotFoundException;
 import ru.maxima.finalproject.models.Person;
-import ru.maxima.finalproject.repositories.PersonRepository;
 
-@Service
-@RequiredArgsConstructor
-public class JwtService {
-    public static final String SECRET = "231123333";
-    private final PersonRepository personRepository;
+/**
+ * @author AramaJava 19.08.2023
+ */
 
-    public String getToken(Person person) {
-        Person personFromDB = personRepository
-                .findByEmail(person.getEmail())
-                .orElseThrow(UserNotFoundException::new);
+public interface JwtService {
 
-        return JWT.create()
-                .withClaim("Email", personFromDB.getEmail())
-                .withClaim("Role", personFromDB.getRole())
-                .withClaim("Name", personFromDB.getName())
+    // получ токен пользователя
+    String getToken(Person person);
 
-                .sign(Algorithm.HMAC256(SECRET));
-    }
+    // получ тек пользователя из токена
+    Person getCurrentPersonFromToken();
+
 }

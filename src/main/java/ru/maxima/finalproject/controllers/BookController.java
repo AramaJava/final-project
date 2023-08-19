@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.models.Book;
-import ru.maxima.finalproject.services.BookService;
+import ru.maxima.finalproject.services.impl.BookServiceImpl;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookController {
 
-    private final BookService bookService;
+    private final BookServiceImpl bookService;
 
     // получить все книги не removed
     @GetMapping()

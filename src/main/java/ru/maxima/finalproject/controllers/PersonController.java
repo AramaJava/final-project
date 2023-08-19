@@ -5,7 +5,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.services.AuthService;
-import ru.maxima.finalproject.services.PersonService;
+import ru.maxima.finalproject.services.impl.PersonServiceImpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,8 +19,15 @@ import java.util.Optional;
 @RequestMapping("/persons")
 public class PersonController {
 
-    private final PersonService personService;
+    private final PersonServiceImpl personService;
     private final AuthService authService;
+
+    @PostMapping()
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    public void addPerson(@RequestBody Person person) {
+        personService.addPerson(person);
+    }
+
 
     @PostMapping("/reg/{adminId}")
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
@@ -28,22 +35,17 @@ public class PersonController {
         authService.registration(user, adminId);
     }
 
+
     @GetMapping()
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     public List<Person> getAllPersons() {
-        return personService.findAll();
+        return personService.findAllPersons();
     }
 
     @GetMapping("{personId}")
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     public Optional<Person> getOnePerson(@PathVariable Long personId) {
-        return personService.findPerson(personId);
-    }
-
-    @PostMapping()
-    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
-    public void addPerson(@RequestBody Person person) {
-        personService.addPerson(person);
+        return personService.findOnePerson(personId);
     }
 
 

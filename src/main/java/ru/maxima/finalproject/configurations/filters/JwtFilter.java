@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import ru.maxima.finalproject.configurations.details.PersonDetails;
 import ru.maxima.finalproject.models.Person;
-import ru.maxima.finalproject.services.JwtService;
+import ru.maxima.finalproject.services.impl.JwtServiceImpl;
 
 import java.io.IOException;
 
@@ -29,7 +29,7 @@ public class JwtFilter extends OncePerRequestFilter {
         if (authHeader != null && authHeader.contains("Bearer ")) {
             String token = authHeader.substring(7);
             if(!token.isBlank()) {
-                DecodedJWT decodedJWT = JWT.require(Algorithm.HMAC256(JwtService.SECRET))
+                DecodedJWT decodedJWT = JWT.require(Algorithm.HMAC256(JwtServiceImpl.SECRET))
                         .build()
                         .verify(token);
 
