@@ -45,11 +45,6 @@ public class PersonServiceImpl implements PersonService {
             return p;
         } else throw new UserNotFoundException();
     }
-    @Override
-    public void addPerson(Person person) {
-
-    }
-
 
     @Override
     public boolean createPerson(Person person) {

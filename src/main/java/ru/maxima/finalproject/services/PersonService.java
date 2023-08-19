@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface PersonService {
 
     // добавить персону в базу (регистрация)
-    void addPerson(Person person);
+    boolean createPerson(Person person);
 
     // получить список всех персн
     List<Person> findAllPersons();
@@ -26,7 +26,7 @@ public interface PersonService {
     // получить персону по id
     Optional<Person> findOnePerson(Long personId);
 
-    boolean createPerson(Person person);
+
 
 }
 
