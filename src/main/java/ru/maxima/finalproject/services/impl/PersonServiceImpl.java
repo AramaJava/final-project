@@ -48,6 +48,15 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void addPerson(Person person) {
 
+    }
+
+
+    @Override
+    public boolean createPerson(Person person) {
+        // check id person already exist
+        if (personRepository.existsByEmail(person.getEmail())) {
+            return false;
+        }
         Person personForSave = Person.builder()
                 .name(person.getName())
                 .createdPerson(jwtService.getCurrentPersonFromToken().getName())
@@ -58,5 +67,6 @@ public class PersonServiceImpl implements PersonService {
                 .build();
         personRepository.save(personForSave);
 
+        return true;
     }
 }

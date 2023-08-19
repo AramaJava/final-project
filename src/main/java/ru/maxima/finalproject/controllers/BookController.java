@@ -34,9 +34,16 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping()
-    public ResponseEntity<Book> addBook(@RequestBody Book book) {
-        bookService.saveBook(book);
-        return ResponseEntity.created(null).build();
+    public ResponseEntity<String> addBook(@RequestBody Book book) {
+        boolean isBookCreated = bookService.createBook(book);
+
+        if (isBookCreated) {
+            return ResponseEntity.status(HttpStatus.CREATED).body("Book created successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to create Book");
+        }
+
+
     }
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")

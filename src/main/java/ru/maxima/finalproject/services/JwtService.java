@@ -8,7 +8,7 @@ import ru.maxima.finalproject.models.Person;
 
 public interface JwtService {
 
-    // получ токен пользователя
+    // создаем и возвращаем токен пользователя
     String getToken(Person person);
 
     // получ тек пользователя из токена

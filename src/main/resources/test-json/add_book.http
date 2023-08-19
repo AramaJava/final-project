@@ -4,10 +4,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQ
 Content-Type: application/json
 
 {
-"name": "Хорошая книга 2",
-"author": "Я2222",
-"yearOfProduction": 2021,
-"annotation": "читать по любому"
+"name": "Хорошая книга 251",
+"author": "zzz",
+"yearOfProduction": 2021
 }
 
 

@@ -26,6 +26,7 @@ public interface PersonService {
     // получить персону по id
     Optional<Person> findOnePerson(Long personId);
 
+    boolean createPerson(Person person);
 
 }
 
