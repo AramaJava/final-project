@@ -44,12 +44,13 @@ public class BookServiceImpl implements BookService {
     }
 
     public void removeBookById(Long bookId) {
+        String removedPersonName = jwtService.getCurrentPersonFromToken().getName();
 
         Book bookForRemove = bookRepository.findBookById(bookId);
         bookForRemove.setRemovedAt(LocalDateTime.now());
-        bookForRemove.setRemovedPerson(jwtService.getCurrentPersonFromToken().getName());
+        bookForRemove.setRemovedPerson(removedPersonName);
         bookForRemove.setUpdatedAt(LocalDateTime.now());
-        bookForRemove.setUpdatedPerson(jwtService.getCurrentPersonFromToken().getName());
+        bookForRemove.setUpdatedPerson(removedPersonName);
         bookRepository.save(bookForRemove);
     }
 

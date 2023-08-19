@@ -14,7 +14,7 @@ Content-Type: application/json
 ### не админ
 
 POST localhost:8080/books
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIyQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.22gf5yQPz2sYf4Tpjm-oK26qYwaoBEcrjNEebTbD05o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.jgyeMU-O6xhn5nGRTLgyi4AiCk1gFYVzoSe19xS_cCA
 Content-Type: application/json
 
 {

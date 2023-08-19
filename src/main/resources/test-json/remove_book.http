@@ -1,11 +1,11 @@
 ### админ
-POST localhost:8080/books/remove/23
+POST localhost:8080/books/remove/18
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24ifQ.MbDFDri66C9QOj0TPpDcHdeGjAu-fPgurk6uezPMlAM
 Content-Type: application/json
 
 
 ### не админ
-POST localhost:8080/books/remove/23
+POST localhost:8080/books/remove/18
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIyQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.22gf5yQPz2sYf4Tpjm-oK26qYwaoBEcrjNEebTbD05o
 Content-Type: application/json
 

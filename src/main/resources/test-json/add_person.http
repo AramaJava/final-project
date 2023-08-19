@@ -7,3 +7,16 @@ Content-Type: application/json
   "email": "user1@mail.ru",
   "password" : "2222"
 }
+
+
+
+### рег не админ
+POST localhost:8080/persons
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.jgyeMU-O6xhn5nGRTLgyi4AiCk1gFYVzoSe19xS_cCA
+Content-Type: application/json
+
+{
+  "name": "user2",
+  "email": "user1@mail.ru",
+  "password" : "2222"
+}
