@@ -9,16 +9,23 @@ import java.util.Optional;
 
 public interface PersonService {
 
-    // получить имя персоны из базы
-    String getPersonNameFromDB(Long id);
+    // добавить персону в базу (регистрация)
+    void addPerson(Person person);
 
     // получить список всех персн
     List<Person> findAllPersons();
 
+    // редактировать персону
+
+    // пометить на удаление (removedAt)
+
+
+    // получить имя персоны из базы
+    String getPersonNameFromDB(Long id);
+
     // получить персону по id
     Optional<Person> findOnePerson(Long personId);
 
-    // добавить персону в базу
-    void addPerson(Person person);
+
 }
 

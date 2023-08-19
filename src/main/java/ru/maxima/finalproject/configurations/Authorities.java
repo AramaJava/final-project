@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
  * @author AramaJava 13.08.2023
  */
 
+@Getter
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Authorities {
 
     @SuppressWarnings("InstantiationOfUtilityClass")
-    @Getter
     private static final Authorities instance = new Authorities();
 
     public static final String ROLE_ADMIN = "admin";
