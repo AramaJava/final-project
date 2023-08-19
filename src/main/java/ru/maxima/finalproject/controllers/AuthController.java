@@ -8,6 +8,7 @@ import ru.maxima.finalproject.services.AuthService;
 import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.services.PersonService;
 
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/auth")

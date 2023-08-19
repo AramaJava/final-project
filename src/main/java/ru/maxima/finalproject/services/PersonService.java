@@ -13,18 +13,18 @@ public interface PersonService {
     boolean createPerson(Person person);
 
     // получить список всех персн
-    List<Person> findAllPersons();
+    List<Person> getAllPersons();
 
     // редактировать персону
 
     // пометить на удаление (removedAt)
-
+    boolean blockPerson (Long id);
 
     // получить имя персоны из базы
     String getPersonNameFromDB(Long id);
 
     // получить персону по id
-    Optional<Person> findOnePerson(Long personId);
+    Optional<Person> getOnePerson(Long personId);
 
 
 

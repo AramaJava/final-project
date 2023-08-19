@@ -1,10 +1,10 @@
 package ru.maxima.finalproject.services.impl;
 
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.maxima.finalproject.configurations.Authorities;
 import ru.maxima.finalproject.exceptions.UserNotFoundException;
 
@@ -33,12 +33,27 @@ public class PersonServiceImpl implements PersonService {
     public String getPersonNameFromDB(Long id) {
         return personRepository.findPersonById(id).orElseThrow(UserNotFoundException::new).getName();
     }
+
     @Override
-    public List<Person> findAllPersons() {
+    public List<Person> getAllPersons() {
         return personRepository.findAll();
     }
+
     @Override
-    public Optional<Person> findOnePerson(Long personId) {
+    public boolean blockPerson(Long id) {
+        if (personRepository.existsById(id)) {
+            if (personRepository.getReferenceById(id).getRemovedAt() == null) {
+                personRepository.getReferenceById(id).setRemovedPerson(jwtService.getCurrentPersonFromToken().getName());
+                personRepository.getReferenceById(id).setRemovedAt(LocalDateTime.now());
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+    @Override
+    public Optional<Person> getOnePerson(Long personId) {
         Optional<Person> p = personRepository.findPersonById(personId);
 
         if (p.isPresent()) {
@@ -64,4 +79,6 @@ public class PersonServiceImpl implements PersonService {
 
         return true;
     }
+
+
 }

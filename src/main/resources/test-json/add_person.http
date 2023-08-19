@@ -3,7 +3,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQ
 Content-Type: application/json
 
 {
-  "name": "user1",
+  "name": "user3",
   "email": "user1@mail.ru",
   "password" : "2222"
 }

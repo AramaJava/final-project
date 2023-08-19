@@ -12,12 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Authorities {
 
-    @SuppressWarnings("InstantiationOfUtilityClass")
     @Getter
+    @SuppressWarnings("InstantiationOfUtilityClass")
     private static final Authorities instance = new Authorities();
 
     public static final String ROLE_ADMIN = "admin";
     public static final String ROLE_USER = "user";
-
 
 }
