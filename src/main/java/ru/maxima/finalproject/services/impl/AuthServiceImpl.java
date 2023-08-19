@@ -17,7 +17,6 @@ import ru.maxima.finalproject.services.AuthService;
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
 
-
     private final JwtServiceImpl jwtService;
     private final AuthenticationManager authenticationManager;
 

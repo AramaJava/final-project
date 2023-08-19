@@ -24,8 +24,16 @@ public class PersonController {
 
     @PostMapping()
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
-    public void addPerson(@RequestBody Person person) {
-        personService.createPerson(person);
+    public ResponseEntity<String> addPerson(@RequestBody Person person) {
+        boolean isPersonCreated = personService.createPerson(person);
+
+        if (isPersonCreated) {
+            return ResponseEntity.status(HttpStatus.CREATED).body("Person is created successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to create person");
+        }
+
+
     }
 
     @GetMapping()
@@ -63,6 +71,5 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Person not found");
         }
     }
-
 
 }

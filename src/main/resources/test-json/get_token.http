@@ -1,4 +1,4 @@
-GET localhost:8080/auth/login
+GET localhost:8080/auth/get-token
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ###
 
-GET localhost:8080/auth/login
+GET localhost:8080/auth/get-token
 Content-Type: application/json
 
 {

@@ -32,6 +32,7 @@ public class SpringConfiguration {
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(a -> {
                     a.requestMatchers("/auth/login").permitAll();
+                    a.requestMatchers("/auth/get-token").permitAll();
                     a.anyRequest().authenticated();
                 })
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
