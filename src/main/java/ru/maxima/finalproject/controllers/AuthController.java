@@ -3,11 +3,13 @@ package ru.maxima.finalproject.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import ru.maxima.finalproject.configurations.details.PersonDetailsService;
 import ru.maxima.finalproject.services.AuthService;
 import ru.maxima.finalproject.models.Person;
-import ru.maxima.finalproject.services.PersonService;
+
 
 
 @RestController
@@ -16,9 +18,8 @@ import ru.maxima.finalproject.services.PersonService;
 public class AuthController {
 
     private final AuthService authService;
-    private final PersonService personService;
+    private final PersonDetailsService personDetailsService;
 
-    //@PreAuthorize("hasAnyAuthority(@authorities.ROLE_USER, @authorities.ROLE_USER)")
 
     @GetMapping("/get-token")
     public String authentication(@RequestBody Person person) {
@@ -26,13 +27,14 @@ public class AuthController {
         return authService.authentication(person);
     }
 
-   /* @PostMapping
+
+    @GetMapping("/login")
     public ResponseEntity<String> loginPerson(@RequestBody Person person) {
-        boolean isPersonCreated = personService.createPerson(person);
-        if (isPersonCreated) {
-            return ResponseEntity.status(HttpStatus.CREATED).body("Person created successfully");
+        UserDetails personDetails = personDetailsService.loadUserByUsername(person.getEmail());
+        if (personDetails.isEnabled()) {
+            return ResponseEntity.status(HttpStatus.OK).body("Person logged successfully");
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to create person");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Person failed to login");
         }
-    }*/
+    }
 }
