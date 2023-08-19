@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.maxima.finalproject.configurations.Authorities;
 import ru.maxima.finalproject.exceptions.UserNotFoundException;
-
 import ru.maxima.finalproject.models.Person;
 import ru.maxima.finalproject.repositories.PersonRepository;
 import ru.maxima.finalproject.services.PersonService;
@@ -40,11 +39,30 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public boolean blockPerson(Long id) {
-        if (personRepository.existsById(id)) {
-            if (personRepository.getReferenceById(id).getRemovedAt() == null) {
-                personRepository.getReferenceById(id).setRemovedPerson(jwtService.getCurrentPersonFromToken().getName());
-                personRepository.getReferenceById(id).setRemovedAt(LocalDateTime.now());
+    public boolean editPerson(Person person) {
+        if (personRepository.existsByEmail(person.getEmail())) {
+
+            Person personForUpdate = personRepository.getReferenceById(person.getId());
+
+            personForUpdate.setName(person.getName());
+            personForUpdate.setAge(person.getAge());
+            personForUpdate.setPhoneNumber(person.getPhoneNumber());
+            personForUpdate.setPassword(passwordEncoder.encode(person.getPassword()));
+            personForUpdate.setRole(person.getRole());
+
+            personRepository.save(personForUpdate);
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public boolean blockPerson(Person person) {
+        if (personRepository.existsById(person.getId())) {
+            if (personRepository.getReferenceById(person.getId()).getRemovedAt() == null) {
+                personRepository.getReferenceById(person.getId()).setRemovedPerson(jwtService.getCurrentPersonFromToken().getName());
+                personRepository.getReferenceById(person.getId()).setRemovedAt(LocalDateTime.now());
                 return true;
             }
             return false;
@@ -63,7 +81,6 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public boolean createPerson(Person person) {
-        // check id person already exist
         if (personRepository.existsByEmail(person.getEmail())) {
             return false;
         }

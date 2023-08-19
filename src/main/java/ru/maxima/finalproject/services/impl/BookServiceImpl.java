@@ -49,21 +49,6 @@ public class BookServiceImpl implements BookService {
         bookRepository.save(bookForSave);
         return true;
 
-
-/*
-
-        Book bookForSave = Book.builder()
-                .name(book.getName())
-                .author(book.getAuthor())
-                .yearOfProduction(book.getYearOfProduction())
-                .annotation(book.getAnnotation())
-                .createdPerson(jwtService.getCurrentPersonFromToken().getName())
-                .createdAt(LocalDateTime.now())
-                .build();
-        bookRepository.save(bookForSave);
-
-        return ResponseEntity.created(null).build();
-*/
     }
 
     public void removeBookById(Long bookId) {

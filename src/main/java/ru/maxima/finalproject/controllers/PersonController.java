@@ -43,15 +43,26 @@ public class PersonController {
     @PostMapping("/block")
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     public ResponseEntity<String> blockPerson(@RequestBody Person person) {
-        boolean isPersonBlocked = personService.blockPerson(person.getId());
+        boolean isPersonBlocked = personService.blockPerson(person);
 
         if (isPersonBlocked) {
-            return ResponseEntity.status(HttpStatus.CREATED).body("Person is blocked successfully");
+            return ResponseEntity.status(HttpStatus.OK).body("Person is blocked successfully");
         } else {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to block person");
         }
     }
 
+    @PostMapping("/edit")
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    public ResponseEntity<String> editPerson(@RequestBody Person person) {
+        boolean isPersonEdited = personService.editPerson(person);
+
+        if (isPersonEdited) {
+            return ResponseEntity.status(HttpStatus.OK).body("Person is updated successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Person not found");
+        }
+    }
 
 
 }

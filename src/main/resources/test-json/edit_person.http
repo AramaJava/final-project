@@ -1,0 +1,31 @@
+### редакт админ
+POST localhost:8080/persons/edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24ifQ.MbDFDri66C9QOj0TPpDcHdeGjAu-fPgurk6uezPMlAM
+Content-Type: application/json
+
+{
+  "id": 23,
+  "name": "Федор",
+  "age": 33,
+  "email": "user1@mail.ru",
+  "phoneNumber": "+7 933 3323333",
+  "password" : "12345",
+  "role": "admin"
+}
+
+
+### редакт не админ
+POST localhost:8080/persons/edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.jgyeMU-O6xhn5nGRTLgyi4AiCk1gFYVzoSe19xS_cCA
+Content-Type: application/json
+
+{
+  "id": 23,
+  "name": "Федор",
+  "age": 33,
+  "email": "user1@mail.ru",
+  "phoneNumber": "+7 933 3323333",
+  "password" : "12345",
+  "role": "admin"
+}
+

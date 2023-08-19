@@ -16,9 +16,10 @@ public interface PersonService {
     List<Person> getAllPersons();
 
     // редактировать персону
+    boolean editPerson (Person person);
 
     // пометить на удаление (removedAt)
-    boolean blockPerson (Long id);
+    boolean blockPerson (Person person);
 
     // получить имя персоны из базы
     String getPersonNameFromDB(Long id);
