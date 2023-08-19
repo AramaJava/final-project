@@ -21,7 +21,6 @@ public class BookController {
 
     private final BookServiceImpl bookService;
 
-    // получить все книги не removed
     @GetMapping()
     public ResponseEntity<List<Book>> getAllBooks() {
         List<Book> allBooks = bookService.allBooks();
@@ -33,7 +32,6 @@ public class BookController {
             return new ResponseEntity<>(allBooks, HttpStatus.OK);
     }
 
-    // добавить книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping()
     public ResponseEntity<Book> addBook(@RequestBody Book book) {
@@ -41,16 +39,11 @@ public class BookController {
         return ResponseEntity.created(null).build();
     }
 
-    // удалить (пометить removedAt) книгу
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/remove/{bookId}")
     public void removeBookById(@PathVariable Long bookId) {
         bookService.removeBookById(bookId);
     }
 
-    // редактировать книгу (админ)
 
-    // взять книгу (любой авторизовавшийся)
-
-    // вернуть книгу (любой авторизовавшийся)
 }
