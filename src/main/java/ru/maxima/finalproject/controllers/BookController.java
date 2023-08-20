@@ -51,5 +51,38 @@ public class BookController {
         bookService.removeBookById(bookId);
     }
 
+    @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
+    @PostMapping("/edit")
+    public ResponseEntity<String> editBook(@RequestBody Book book) {
+        boolean isBookEdited = bookService.editBook(book);
+        if (isBookEdited) {
+            return ResponseEntity.status(HttpStatus.OK).body("Book is updated successfully");
+        } else
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Book not found!");
+    }
+
+    @PostMapping("/take/{bookId}")
+    public ResponseEntity<String> takeBook (@PathVariable Long bookId) {
+
+        boolean isTakedBook = bookService.takeBook(bookId);
+        if (isTakedBook) {
+        return ResponseEntity.status(HttpStatus.OK).body("Book is taken successfully");
+    } else
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Book not found!");
+    }
+
+   /* @Override
+    public List<BookDto> takeBook(Long personId, Long bookId) {
+        var person = personRepository.findById(personId).orElseThrow(PersonWithIdNotFoundException::new);
+        List<Book> books = person.getBooks();
+        if(books == null) { books = new ArrayList<>();    }
+
+        books.add(bookRepository.findById(bookId).get());
+        person.setBooks(books);
+        personRepository.save(person);
+        return person.getBooks().stream().map(bookMapper::toDto).collect(Collectors.toList());}
+*/
 
 }
+
+

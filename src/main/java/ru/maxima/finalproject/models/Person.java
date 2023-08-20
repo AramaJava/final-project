@@ -32,6 +32,7 @@ public class Person {
     private LocalDateTime removedAt;
     private String createdPerson;
     private String removedPerson;
-    @OneToMany(mappedBy = "owner")
+
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.REFRESH)
     private List<Book> takenBooks;
 }

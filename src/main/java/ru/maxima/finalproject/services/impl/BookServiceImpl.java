@@ -2,11 +2,10 @@ package ru.maxima.finalproject.services.impl;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.maxima.finalproject.models.Book;
-
 import ru.maxima.finalproject.repositories.BookRepository;
 import ru.maxima.finalproject.services.BookService;
 
@@ -63,18 +62,43 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public ResponseEntity<Book> updateBook(Book book) {
-        return null;
+    public boolean editBook(Book book) {
+        if (bookRepository.existsById(book.getId())) {
+
+            String updatedPersonName = jwtService.getCurrentPersonFromToken().getName();
+
+            Book bookForUpdate = bookRepository.getReferenceById(book.getId());
+
+            bookForUpdate.setName(book.getName());
+            bookForUpdate.setAuthor(book.getAuthor());
+            bookForUpdate.setYearOfProduction(book.getYearOfProduction());
+            bookForUpdate.setAnnotation(book.getAnnotation());
+
+            bookForUpdate.setUpdatedPerson(updatedPersonName);
+            bookForUpdate.setUpdatedAt(LocalDateTime.now());
+
+            bookRepository.save(bookForUpdate);
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public boolean takeBook(Long bookId) {
+        if (bookRepository.existsById(bookId)) {
+
+            Book bookForTake = bookRepository.findBookById(bookId);
+            bookForTake.setOwner(jwtService.getCurrentPersonFromToken());
+            bookRepository.save(bookForTake);
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public ResponseEntity<Book> takeBook(Book book) {
-        return null;
-    }
-
-    @Override
-    public ResponseEntity<Book> returnBook(Book book) {
-        return null;
+    public boolean returnBook(Book book) {
+        return true;
     }
 
 }

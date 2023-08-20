@@ -1,24 +1,9 @@
-### токен админа
-POST localhost:8080/books
+### админ
+POST localhost:8080/books/take/23
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24ifQ.MbDFDri66C9QOj0TPpDcHdeGjAu-fPgurk6uezPMlAM
 Content-Type: application/json
 
-{
-"name": "Хорошая книга 199",
-"author": "zzz",
-"yearOfProduction": 2021
-}
-
-
 ### не админ
-
-POST localhost:8080/books
+POST localhost:8080/books/take/23
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyMSJ9.jgyeMU-O6xhn5nGRTLgyi4AiCk1gFYVzoSe19xS_cCA
 Content-Type: application/json
-
-{
-  "name": "Хорошая книга 3",
-  "author": "Я2222",
-  "yearOfProduction": 2021,
-  "annotation": "читать по любому"
-}
