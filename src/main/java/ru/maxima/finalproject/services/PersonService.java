@@ -12,7 +12,7 @@ public interface PersonService {
     // добавить персону в базу (регистрация)
     boolean createPerson(Person person);
 
-    // получить список всех персн
+    // получить список всех персон
     List<Person> getAllPersons();
 
     // редактировать персону

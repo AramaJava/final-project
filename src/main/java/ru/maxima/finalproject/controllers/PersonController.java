@@ -33,7 +33,6 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Failed to create person");
         }
 
-
     }
 
     @GetMapping()
