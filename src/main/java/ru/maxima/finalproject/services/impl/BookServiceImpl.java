@@ -87,10 +87,8 @@ public class BookServiceImpl implements BookService {
     @Override
     public boolean takeBook(Long bookId) {
         if (bookRepository.existsById(bookId)) {
-
             Book bookForTake = bookRepository.findBookById(bookId);
             bookForTake.setOwner(jwtService.getCurrentPersonFromToken());
-
             bookRepository.save(bookForTake);
             return true;
         }

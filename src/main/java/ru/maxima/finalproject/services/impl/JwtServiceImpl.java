@@ -27,7 +27,7 @@ public class JwtServiceImpl implements JwtService {
                 .withClaim("Email", personFromDB.getEmail())
                 .withClaim("Role", personFromDB.getRole())
                 .withClaim("Name", personFromDB.getName())
-
+                .withClaim("Id", personFromDB.getId())
                 .sign(Algorithm.HMAC256(SECRET));
     }
     @Override

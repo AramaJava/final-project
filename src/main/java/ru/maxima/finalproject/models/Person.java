@@ -34,6 +34,6 @@ public class Person {
     private String createdPerson;
     private String removedPerson;
     @JsonManagedReference
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "owner")
     private List<Book> takenBooks;
 }
