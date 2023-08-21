@@ -35,8 +35,8 @@ public class AuthController {
                 return ResponseEntity.status(HttpStatus.OK).body("Person logged successfully \n Token: " +  authService.authentication(person));
             }
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Person failed to login");
-        } catch (UserNotFoundException ue) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ue.getMessage());
+        } catch (UserNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
 }

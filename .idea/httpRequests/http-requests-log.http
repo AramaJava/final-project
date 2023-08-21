@@ -1,3 +1,43 @@
+POST http://localhost:8080/books/edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 135
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 224,
+  "name": "Хорошая книга 9",
+  "author": "zzz",
+  "annotation": "Книжка",
+  "yearOfProduction": 2021
+}
+
+<> 2023-08-21T235742.404.txt
+
+###
+
+POST http://localhost:8080/books/edit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 135
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 124,
+  "name": "Хорошая книга 9",
+  "author": "zzz",
+  "annotation": "Книжка",
+  "yearOfProduction": 2021
+}
+
+<> 2023-08-21T235609.404.txt
+
+###
+
 GET http://localhost:8080/auth/login
 Content-Type: application/json
 Content-Length: 52
@@ -637,28 +677,6 @@ Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
 Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6OX0.wgOv_345mbc_EWzp_OhaHv54DQDQJQ-rJa0HLZ_pZqM
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6OX0.wgOv_345mbc_EWzp_OhaHv54DQDQJQ-rJa0HLZ_pZqM
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-21T220203.200.txt
 
 ###
 

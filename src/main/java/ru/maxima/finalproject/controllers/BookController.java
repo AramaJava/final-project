@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import ru.maxima.finalproject.exceptions.BookNotFoundException;
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.impl.BookServiceImpl;
 
@@ -53,12 +54,13 @@ public class BookController {
 
     @PreAuthorize("hasAnyAuthority(@authorities.ROLE_ADMIN)")
     @PostMapping("/edit")
-    public ResponseEntity<String> editBook(@RequestBody Book book) {
+    public ResponseEntity<String> editBook(@RequestBody Book book) throws BookNotFoundException {
         boolean isBookEdited = bookService.editBook(book);
         if (isBookEdited) {
             return ResponseEntity.status(HttpStatus.OK).body("Book is updated successfully");
-        } else
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Book not found!");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new BookNotFoundException().getMessage());
+        }
     }
 
     @PostMapping("/take/{bookId}")
