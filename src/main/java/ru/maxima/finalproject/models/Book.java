@@ -1,10 +1,13 @@
 package ru.maxima.finalproject.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDateTime;
 
@@ -30,7 +33,10 @@ public class Book {
     private String createdPerson;
     private String updatedPerson;
     private String removedPerson;
-    @ManyToOne (cascade = CascadeType.PERSIST)
+
+    @JsonBackReference
+    @ManyToOne
     @JoinColumn(name="person_id", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Person owner;
 }

@@ -1,6 +1,7 @@
 package ru.maxima.finalproject.models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,7 +33,7 @@ public class Person {
     private LocalDateTime removedAt;
     private String createdPerson;
     private String removedPerson;
-
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.REFRESH)
+    @JsonManagedReference
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Book> takenBooks;
 }
