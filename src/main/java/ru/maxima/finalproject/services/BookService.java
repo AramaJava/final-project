@@ -27,7 +27,7 @@ public interface BookService {
     boolean takeBook (Long bookId);
 
     // вернуть книгу (любой авторизовавшийся)
-    boolean returnBook (Book book);
+    boolean returnBook (Long bookId);
 
 
 

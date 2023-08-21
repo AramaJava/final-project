@@ -32,7 +32,6 @@ public class Book {
     private String createdPerson;
     private String updatedPerson;
     private String removedPerson;
-
     @ManyToOne
     @JoinColumn(name="person_id", referencedColumnName = "id")
     private Person owner;

@@ -68,20 +68,18 @@ public class BookController {
         if (isTakenBook) {
             return ResponseEntity.status(HttpStatus.OK).body("Book is taken successfully");
         } else
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Book not found!");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Book not found / book was taken!");
     }
 
-   /* @Override
-    public List<BookDto> takeBook(Long personId, Long bookId) {
-        var person = personRepository.findById(personId).orElseThrow(PersonWithIdNotFoundException::new);
-        List<Book> books = person.getBooks();
-        if(books == null) { books = new ArrayList<>();    }
+    @PostMapping("/return/{bookId}")
+    public ResponseEntity<String> returnBook(@PathVariable Long bookId) {
 
-        books.add(bookRepository.findById(bookId).get());
-        person.setBooks(books);
-        personRepository.save(person);
-        return person.getBooks().stream().map(bookMapper::toDto).collect(Collectors.toList());}
-*/
+        boolean isReturnedBook = bookService.returnBook(bookId);
+        if (isReturnedBook) {
+            return ResponseEntity.status(HttpStatus.OK).body("Book is returned successfully");
+        } else
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("You cant return this book!");
+    }
 
 }
 

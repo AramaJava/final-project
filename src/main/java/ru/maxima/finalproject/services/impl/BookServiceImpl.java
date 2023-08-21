@@ -88,16 +88,31 @@ public class BookServiceImpl implements BookService {
     public boolean takeBook(Long bookId) {
         if (bookRepository.existsById(bookId)) {
             Book bookForTake = bookRepository.findBookById(bookId);
-            bookForTake.setOwner(jwtService.getCurrentPersonFromToken());
-            bookRepository.save(bookForTake);
-            return true;
+            if (bookForTake.getOwner() == null) {
+                bookForTake.setOwner(jwtService.getCurrentPersonFromToken());
+                bookRepository.save(bookForTake);
+                return true;
+            } else {
+                return false;
+            }
         }
         return false;
     }
 
     @Override
-    public boolean returnBook(Book book) {
-        return true;
+    public boolean returnBook(Long bookId) {
+        if (bookRepository.existsById(bookId)) {
+            Book bookForTake = bookRepository.findBookById(bookId);
+            if ((bookForTake.getOwner() != null)
+                    && (bookForTake.getOwner().getId().equals(jwtService.getCurrentPersonFromToken().getId()))) {
+                bookForTake.setOwner(null);
+                bookRepository.save(bookForTake);
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
     }
 
 }
