@@ -21,9 +21,6 @@ public interface PersonService {
     // пометить на удаление (removedAt)
     boolean blockPerson (Person person);
 
-    // получить имя персоны из базы
-    String getPersonNameFromDB(Long id);
-
     // получить персону по id
     Optional<Person> getOnePerson(Long personId);
 

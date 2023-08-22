@@ -29,11 +29,6 @@ public class PersonServiceImpl implements PersonService {
 
 
     @Override
-    public String getPersonNameFromDB(Long id) {
-        return personRepository.findPersonById(id).orElseThrow(UserNotFoundException::new).getName();
-    }
-
-    @Override
     public List<Person> getAllPersons() {
         return personRepository.findAll();
     }
