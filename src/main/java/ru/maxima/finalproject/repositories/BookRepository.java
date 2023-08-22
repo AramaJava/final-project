@@ -13,8 +13,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
      List<Book> findByRemovedAtIsNull();
 
-     Book findBookById(Long id);
-
     boolean existsByAuthorAndName(String author, String name);
 
 
