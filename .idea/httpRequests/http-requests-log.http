@@ -1,3 +1,401 @@
+POST http://localhost:8080/books/return/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T202700.404.txt
+
+###
+
+POST http://localhost:8080/books/return/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T202647.200.txt
+
+###
+
+POST http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T202642.404.txt
+
+###
+
+POST http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T202635.404.txt
+
+###
+
+POST http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T202540.200.txt
+
+###
+
+POST http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/books/take/23
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/persons
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T201440.200.json
+
+###
+
+GET http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T201430.200.json
+
+###
+
+GET http://localhost:8080/books/takeBook/23/49
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 52
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "user5@mail.ru",
+  "password": "2222"
+}
+
+<> 2023-08-22T201358.200.txt
+
+###
+
+GET http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 52
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "user5@mail.ru",
+  "password": "2222"
+}
+
+<> 2023-08-22T201308.423.txt
+
+###
+
+GET http://localhost:8080/auth/login
+Content-Type: application/json
+Content-Length: 52
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@mail.ru",
+  "password": "2222"
+}
+
+<> 2023-08-22T201304.200.txt
+
+###
+
+GET http://localhost:8080/auth/get-token
+Content-Type: application/json
+Content-Length: 52
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@mail.ru",
+  "password": "2222"
+}
+
+<> 2023-08-22T201257.200.txt
+
+###
+
+GET http://localhost:8080/books/getbooks/49
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/persons/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 14
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 51
+}
+
+<> 2023-08-22T201123.200.txt
+
+###
+
+POST http://localhost:8080/persons/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Content-Length: 14
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 51
+}
+
+###
+
+POST http://localhost:8080/persons/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Content-Length: 14
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 51
+}
+
+###
+
+POST http://localhost:8080/persons/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 14
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 26
+}
+
+<> 2023-08-22T201045.400.txt
+
+###
+
+POST http://localhost:8080/persons/block
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 14
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 26
+}
+
+<> 2023-08-22T201041.400.txt
+
+###
+
+POST http://localhost:8080/persons
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "user5",
+  "email": "user5@mail.ru",
+  "password" : "2222"
+}
+
+<> 2023-08-22T201010.201.txt
+
+###
+
+POST http://localhost:8080/persons
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "user5",
+  "email": "user5@mail.ru",
+  "password" : "2222"
+}
+
+<> 2023-08-22T200955-1.400.txt
+
+###
+
+POST http://localhost:8080/persons
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 72
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "user5",
+  "email": "user5@mail.ru",
+  "password" : "2222"
+}
+
+<> 2023-08-22T200955.400.txt
+
+###
+
+POST http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 86
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name": "Хорошая книга 199",
+"author": "zzz",
+"yearOfProduction": 2021
+}
+
+<> 2023-08-22T200941.201.txt
+
+###
+
+POST http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Content-Length: 86
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name": "Хорошая книга 199",
+"author": "zzz",
+"yearOfProduction": 2021
+}
+
+<> 2023-08-22T200854.400.txt
+
+###
+
+GET http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T190635.200.json
+
+###
+
+GET http://localhost:8080/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-08-22T190624.200.json
+
+###
+
 GET http://localhost:8080/books/takeBook/23/49
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
 Content-Type: application/json
@@ -211,360 +609,6 @@ Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
 Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T084312.200.txt
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T082632.200.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T082517.200.txt
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T082353.200.txt
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T081445.200.txt
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T081313.200.txt
-
-###
-
-POST http://localhost:8080/books/take/49/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T080749.200.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T043857.200.txt
-
-###
-
-GET http://localhost:8080/books/getbooks/49
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T043847.200.json
-
-###
-
-GET http://localhost:8080/books/getbooks/49
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T043804.200.json
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T035022.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T035017.200.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T035015.404.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T035007.423.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T035000.404.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034953.200.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034943.200.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034939.200.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034933.404.txt
-
-###
-
-POST http://localhost:8080/books/return/231
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034926.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034922.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034307.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034303.200.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034256.423.txt
-
-###
-
-POST http://localhost:8080/books/take/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034254.200.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034249.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034245.404.txt
-
-###
-
-POST http://localhost:8080/books/return/23
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
-Content-Type: application/json
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-08-22T034242.200.txt
 
 ###
 

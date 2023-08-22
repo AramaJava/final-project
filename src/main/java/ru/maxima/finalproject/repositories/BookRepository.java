@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-     List<Book> findByRemovedAtIsNull();
+    List<Book> findByRemovedAtIsNull();
 
     boolean existsByAuthorAndName(String author, String name);
 

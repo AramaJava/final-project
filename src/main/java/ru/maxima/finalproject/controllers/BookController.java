@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.maxima.finalproject.exceptions.BookNotFoundException;
-import ru.maxima.finalproject.exceptions.UserNotFoundException;
 import ru.maxima.finalproject.models.Book;
 import ru.maxima.finalproject.services.BookService;
 
@@ -26,8 +25,8 @@ public class BookController {
     private final BookService bookService;
 
     @GetMapping()
-    public ResponseEntity<List<Book>> getAllBooks() throws BookNotFoundException {
-        List<Book> allBooks = bookService.allBooks();
+    public ResponseEntity<List<Book>> listAllBooks() {
+        List<Book> allBooks = bookService.getAllBooks();
         if (allBooks == null)
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         else if (allBooks.isEmpty())
@@ -66,68 +65,28 @@ public class BookController {
         }
     }
 
-    @GetMapping ("/takeBook/{bookId}/{personId}")
-    public List<Book> takeBook(@PathVariable Long bookId,
-                               @PathVariable Long personId) throws BookNotFoundException {
-        return bookService.takeBook(bookId, personId);
+
+    @PostMapping("/take/{bookId}")
+    public ResponseEntity<String> takeBook(@PathVariable Long bookId) throws BookNotFoundException {
+
+        boolean isTakenBook = bookService.takeBook(bookId);
+        if (isTakenBook) {
+            return ResponseEntity.status(HttpStatus.OK).body("Book is taken successfully");
+        } else return ResponseEntity.status(HttpStatus.NOT_FOUND).body("You cant take this book!");
 
     }
-
-
-
-/*
-    @PostMapping("/take/{personId}/{bookId}")
-    public ResponseEntity<Book> takeBook(@PathVariable Long bookId, @PathVariable Long personId) {
-        boolean isTakenBook;
-        try {
-            isTakenBook = bookService.takeBook(bookId, personId);
-            if (isTakenBook) {
-                return ResponseEntity.status(HttpStatus.OK).body("Book is taken successfully");
-            } else {
-                return ResponseEntity.status(HttpStatus.LOCKED).body("Book is locked");
-            }
-
-        } catch (BookNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
-
-
-    }
-*/
 
     @PostMapping("/return/{bookId}")
-    public ResponseEntity<String> returnBook(@PathVariable Long bookId) {
-        boolean isReturnedBook;
-        try {
-            isReturnedBook = bookService.returnBook(bookId);
-            if (isReturnedBook) {
-                return ResponseEntity.status(HttpStatus.OK).body("Book is returned successfully");
-            } else return ResponseEntity.status(HttpStatus.NOT_FOUND).body("You cant return this book!");
+    public ResponseEntity<String> returnBook(@PathVariable Long bookId) throws BookNotFoundException {
 
-        } catch (BookNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        boolean isReturnedBook = bookService.returnBook(bookId);
+        if (isReturnedBook) {
+            return ResponseEntity.status(HttpStatus.OK).body("Book is returned successfully");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("You cant return this book!");
         }
 
-
     }
-
-
-
-    @GetMapping("/getbooks/{personId}")
-    public List<Book> getTakenBooks (@PathVariable Long personId) throws BookNotFoundException, UserNotFoundException {
-
-        return bookService.getTakenBooks(personId);
-
-
-    }
-
-/*
-    @GetMapping("/getBook/{bookId}")
-    public ResponseEntity<Optional<Book>> getBook(@PathVariable Long bookId) throws BookNotFoundException {
-        return ResponseEntity.ok().body(bookService.getBook(bookId));
-    }
-*/
-
 
 
 }

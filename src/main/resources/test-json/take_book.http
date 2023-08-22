@@ -1,9 +1,9 @@
 ### админ
-GET localhost:8080/books/takeBook/23/49
+POST localhost:8080/books/take/23
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluQG1haWwucnUiLCJSb2xlIjoiYWRtaW4iLCJOYW1lIjoiQW50b24iLCJJZCI6NDl9.V0u-QTc214holH8qEPyQJx8Qp9nFtMNMMhCuUepQBlI
 Content-Type: application/json
 
 ### не админ
-POST localhost:8080/books/takeBook/23/50
+POST localhost:8080/books/take/23
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXI1QG1haWwucnUiLCJSb2xlIjoidXNlciIsIk5hbWUiOiJ1c2VyNSIsIklkIjo1MH0._itNmFAn2HLtAgyLuOpHlIAqS2Z_G5HeFekKiEI4d1Y
 Content-Type: application/json

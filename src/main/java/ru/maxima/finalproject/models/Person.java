@@ -32,6 +32,6 @@ public class Person {
     private LocalDateTime removedAt;
     private String createdPerson;
     private String removedPerson;
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "owner",  cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Book> takenBooks;
 }
